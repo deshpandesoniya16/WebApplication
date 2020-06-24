@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<head>
+<title>Login Form</title>
+
+<!-- <script src="Login.js"></script> -->
+</head>
+<body>
+
+<!-- Username:<input type="text" id="username" name="user"><br>
+Password:<input type="text" id="password" class="name"><br>
+
+<input type="submit" onClick="htmlDocument()">
+
+<h1 id="printUsername" style="color:red">Username will be displayed soon</h1>
+<h1 id="printPassword">Password will be displayed soon</h1>
+
+<input type="text" id="showUsername"> -->
+
+<h1 id="printUsername" style="background-color:red;color:white">Username will be displayed soon</h1>
+
+
+<script>
+
+//stringMethods();
+function stringMethods(){
+
+
+var name='fedors  \'soniya\' learning';
+
+console.log(name);
+console.log(name.length);
+document.getElementById("printUsername").innerHTML="Hello Fedor"+ "<br>"+" How are you?";
+
+
+var data="fedor";
+console.log(typeof(data));
+var data1=new String("fedor");
+console.log(typeof(data1));
+
+
+if(data==data1){
+        console.log("both are equal in ==")
+}
+
+
+
+
+if(data===data1){
+        console.log("both are equal in ===")
+}
+
+var str="Please find me when find you want to find";
+
+var pos=str.indexOf("find");
+
+console.log(pos);
+
+
+var  pos1=str.lastIndexOf("find");
+console.log(pos1);
+
+
+var pos2=str.indexOf("find",10);
+
+console.log(pos2);
+
+var pos3=str.search("find");
+console.log(pos3);
+
+var ext=str.slice(7,11);
+console.log(ext);
+
+
+var ext1=str.slice(-23,-15);
+console.log(ext1);
+
+var ext3=str.substring(7,11);
+console.log(ext3);
+
+
+var ext4=str.substr(7,4);
+console.log(ext4);
+
+
+
+
+var ext5=str.substr(-10);
+console.log(ext5);
+
+
+var rep=str.replace(/find/g,"locate");
+console.log(rep);
+
+var upper=str.toUpperCase();
+console.log(upper);
+
+
+
+var lower=str.toLowerCase();
+console.log(lower);
+
+var strArr=["fedor","soniya","javascript"];
+var merge=str.concat(" ","soniya");
+console.log(merge);
+
+
+var removeSpc=str.trim();
+console.log(removeSpc);
+
+var charserach=str.charAt(0);
+console.log(charserach);
+
+
+var strSplit=str.split(",");
+console.log(strSplit);
+}
+
+   // sendInfo();
+    function sendInfo(){
+        //Data Types
+
+        //Variable is called as variant in javascript
+        //variant means change
+        //variant is a piece of memory
+//Value gets stored in your memory
+
+        //1.String
+        var name;//Declaration of variable
+
+        name="Fedor"//Intialization of variable
+        console.log(typeof(name));
+//2.number
+        var  num=10;
+
+        console.log(typeof(num));
+//3.number
+        var num1=20.20;
+console.log(typeof(num1));
+
+//4.boolean
+
+var bool=true;
+console.log(typeof(bool));
+
+
+//5.object
+
+var check=null;
+console.log(typeof(check));
+
+//6.Array
+//[]
+//
+
+//operators
+//Types Of operators
+//1.Arithmetic +,-,*,/,%,++,--
+//2.Comparision ==,>,<,>=,<==,>==,===,!=,!==
+//3.Logical && || !
+
+//Conditional Programming
+//Condition can be true or false boolean
+//1.if else
+//2.switch case
+
+//Example Number is even or odd
+//
+
+var num=7;
+if(num%2!=0){
+//Execute this statements
+console.log("Number is odd");
+
+}else{
+//Execute this statements
+console.log("Number is even");
+}
+var rem =num%2;
+switch(num%2){
+case 0:console.log("In switch Number is even");
+        break;
+case 1:console.log("In switch Number is odd");
+        break;
+default:break;
+}
+
+//Character is vowel or consonant
+//A_Z 
+//vowels a,e,i,o,u
+//rest consonants
+
+// var char='z';
+
+// if(char==95||char== ){
+//         console.log("Character is vowel "+char);     
+// }
+// else{
+//         console.log("Character is consonant "+char);     
+// }
+
+
+var char ='o';
+switch(char){
+
+case 'a': console.log("Character is vowel "+char);   
+        break;
+
+case 'e': console.log("Character is vowel "+char);   
+        break;
+        
+case 'i': console.log("Character is vowel "+char);   
+        break;
+        
+case 'o': console.log("Character is vowel "+char);   
+        break;
+        
+case 'u': console.log("Character is vowel "+char);   
+        break;
+        
+default: console.log("Character is consonant "+char);   
+        break;    
+
+}
+
+//Loops
+//for,while,do while
+
+//Print numbers from 1 to 10
+// for(intialization;termination;incrementation){
+        //Execute the Instructions
+
+// }
+
+// for(var i=1;i<11;i++){
+//   console.log(i);      
+// }
+
+
+// var fedorsData=["fedor",14,"Programming","US",true]
+// var i;
+// for(i of fedorsData){
+
+//         console.log(i);      
+// }
+
+// intialization
+// while(condition){
+
+
+
+//       increment  
+// }
+
+// var i=10;
+// while(i>=1){
+//         console.log(i);
+//         i--;
+// }
+
+
+// intialization
+// do{
+
+// increment;
+// }while(condition)
+
+var i=1;
+do{
+console.log(i);
+   i++;     
+}while(i<=10);
+
+
+
+// var fedorsData=["fedor",14,"Programming","US",true]
+ //console.log(fedorsData);
+ //console.log(fedorsData[2])
+// console.log(typeof(fedorsData));
+
+
+// fedorsData.push("golf");
+// console.log(fedorsData);
+
+
+// fedorsData.pop("golf");
+// console.log(fedorsData);
+
+
+
+
+
+
+        var username=document.getElementById("username");
+        var password=document.getElementById("password");
+        // console.log("username",username);
+        // console.log("password",password);
+        // console.log("username",username.value);
+
+        // console.log("password",password.value);
+        console.log(document.getElementById("username").value)
+        document.getElementById("printUsername").innerHTML=username.value;
+        document.getElementById("showUsername").value=username.value;
+    }
+
+
+function htmlDocument(){
+
+var name=document.getElementsByTagName("input");
+console.log(name);
+
+
+var name1=document.getElementsByClassName("name");
+console.log(name1);
+
+
+//document.write(Date());
+
+var username=document.getElementById("username");
+     
+        console.log(document.getElementById("username").value)
+  document.getElementById("printUsername").innerHTML=username.value;
+
+     var check=    document.getElementById("printUsername");
+check.style.color="blue";
+
+
+
+}
+
+document.getElementById("printUsername").addEventListener("mouseover",changeText);
+
+function changeText(){
+        document.getElementById("printUsername").innerHTML="soniya";
+        alert("Name is changed");
+        
+}
+
+</script>
+</body>
+</html>
